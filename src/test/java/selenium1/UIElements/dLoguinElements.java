@@ -14,9 +14,8 @@ public class dLoguinElements {
 		
 	
 		flash = Driver.driver.findElement(By.xpath("//*[@id=\"flash\"]"));
-		logoutbutton = Driver.driver.findElement(By.xpath("//*[@id=\"login\"]/button/i"));
+		logoutbutton = Driver.driver.findElement(By.xpath("//*[@id=\"content\"]/div/a"));
 		
-	
 
 }
 		

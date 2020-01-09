@@ -12,8 +12,7 @@ public class LoguinPage {
 	public static WebElement passbox;
 	public static WebElement loginbutton;
 	public static WebElement flash;
-	public static WebElement logoutbutton;
-	
+
 	
 	public static void loginelements(){
 	

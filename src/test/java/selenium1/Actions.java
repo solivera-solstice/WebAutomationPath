@@ -1,6 +1,8 @@
 package selenium1;
 
 import selenium1.Driver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import selenium1.UIElements.LoguinPage;
 
 public class Actions {
@@ -20,4 +22,6 @@ public class Actions {
 		
 	}
 
+	
+	
 }

@@ -31,7 +31,7 @@ public class LoginTestCases {
 					System.out.println("username is enabled");
 					}
 					else {
-						System.out.println("username is enabled");
+						System.out.println("username is not enabled");
 					}
 					//passbox to a boolean variable and check if is enabled
 					boolean checkpassenabled = LoguinPage.passbox.isEnabled();
@@ -71,6 +71,50 @@ public class LoginTestCases {
 
 		
 		//Validate failed loguin message
+		boolean checkflashdisplayed = LoguinPage.flash.isDisplayed();
+		if (checkflashdisplayed == true) {
+			System.out.println("Flash is displayed");
+		}
+		else {
+			
+			System.out.println("Flash is not displayed");
+		}
+
+		String flashtext = LoguinPage.flash.getText();
+		System.out.println(flashtext);
+		
+		
+		boolean checklogoutbutton = LoguinPage.loginbutton.isEnabled();
+		if (checklogoutbutton == true) {
+			System.out.println("Login button is enabled");}
+		else{
+				System.out.println("Login button not enabled");		
+		
+		}
+
+		
+	
+		
+	}
+	
+	
+	
+	@Test(priority=4)
+	public void validlogin() {
+		
+		LoguinPage.loginelements();
+			
+			Actions.fillfieldsloguin("tomsmith", "SuperSecretPassword!");
+			LoguinPage.loginbutton.click();
+			
+		}
+	
+	@Test(priority=5)
+	public void validloguinvalidations() {
+		
+		dLoguinElements.elements();
+		
+		//Validate failed loguin message
 		boolean checkflashdisplayed = dLoguinElements.flash.isDisplayed();
 		if (checkflashdisplayed == true) {
 			System.out.println("Flash is displayed");
@@ -90,14 +134,8 @@ public class LoginTestCases {
 		else{
 				System.out.println("Logout button not enabled");		
 		
-		}
 		
-	
-		
-	}
-	
-	
-	
+		}}
 	
 	
 	
