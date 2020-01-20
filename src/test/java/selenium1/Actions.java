@@ -1,27 +1,17 @@
 package selenium1;
 
-import selenium1.Driver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import selenium1.UIElements.LoguinPage;
+import selenium1.UIElements.LoginPage;
 
 public class Actions {
-	
-	public static void openpage() {
-		
-		Driver.IWebdriver();
-		Driver.driver.get(TestScenarios.baseurl);
-		TestScenarios.loginform();
-	}
-	
-	public static void fillfieldsloguin(String user, String pass ) {
-		
-		LoguinPage.userbox.sendKeys(user);
-		LoguinPage.passbox.sendKeys(pass);
-		
-		
+
+	public static void openPage() {
+		Driver.driver.get(TestScenarios.baseURL);
+		TestScenarios.loginForm();
 	}
 
-	
-	
+	public static void fillFieldsLogin(String user, String pass) {
+		LoginPage.userBox.sendKeys(user);
+		LoginPage.passBox.sendKeys(pass);
+	}
+
 }
